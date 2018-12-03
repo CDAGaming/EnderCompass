@@ -14,7 +14,7 @@ public class EnderCompassClient implements ClientTickable {
     private static World strongholdWorld;
 
     public static Minecraft getMinecraft() {
-        return Minecraft.getMinecraft();
+        return Minecraft.getInstance();
     }
 
     public static WorldClient getWorld() {

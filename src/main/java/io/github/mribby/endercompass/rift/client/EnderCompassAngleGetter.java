@@ -67,7 +67,7 @@ public class EnderCompassAngleGetter implements IItemPropertyGetter {
      * @return The new, wobbly angle
      */
     private double wobble(World world, double angle) {
-        long worldTime = world.getTotalWorldTime();
+        long worldTime = world.getGameTime();
         if (worldTime != prevWorldTime) {
             prevWorldTime = worldTime;
             double angleDifference = angle - prevAngle;

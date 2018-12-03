@@ -16,7 +16,7 @@ public class EnderCompassMod implements ItemAdder, PacketAdder {
 
     @Override
     public void registerItems() {
-        Item.registerItem(new ResourceLocation("endercompass", "ender_compass"), ENDER_COMPASS);
+        Item.register(new ResourceLocation("endercompass", "ender_compass"), ENDER_COMPASS);
     }
 
     @Override
