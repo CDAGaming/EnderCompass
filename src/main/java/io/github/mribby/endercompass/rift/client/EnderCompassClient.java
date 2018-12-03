@@ -44,7 +44,7 @@ public class EnderCompassClient implements ClientTickable {
     }
 
     @Override
-    public void clientTick() {
+    public void clientTick(final Minecraft minecraft) {
         if (hasEnderCompass()) {
             if (getWorld() != strongholdWorld) {
                 resetStrongholdPos();

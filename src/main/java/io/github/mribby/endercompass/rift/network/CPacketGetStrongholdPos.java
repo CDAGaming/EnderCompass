@@ -23,7 +23,7 @@ public class CPacketGetStrongholdPos implements Packet<INetHandlerPlayServer> {
         PacketThreadUtil.checkThreadAndEnqueue(this, connection, world);
         if (EnderCompassMod.containsCompass(player.inventory)) {
             world.addScheduledTask(() -> {
-                BlockPos pos = world.getChunkProvider().findNearestStructure(world, "Stronghold", new BlockPos(player), 100);
+                BlockPos pos = world.getChunkProvider().findNearestStructure(world, "Stronghold", new BlockPos(player), 100, false);
                 if (pos != null) {
                     player.connection.sendPacket(new SPacketSetStrongholdPos(pos));
                 }

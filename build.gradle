@@ -1,10 +1,12 @@
 buildscript {
     repositories {
         jcenter()
+		maven { url 'https://www.jitpack.io' }
+        maven { url 'https://files.minecraftforge.net/maven' }
         maven { url 'https://www.dimdev.org/maven/' }
     }
     dependencies {
-        classpath 'org.dimdev:ForgeGradle:2.3-SNAPSHOT'
+        classpath 'com.github.Chocohead:ForgeGradle:moderniser-SNAPSHOT'
     }
 }
 
@@ -13,23 +15,26 @@ apply plugin: 'java'
 
 group 'io.github.mribby.endercompass.rift'
 version '1.0.2'
-archivesBaseName = 'EnderCompass-Rift-1.13'
+archivesBaseName = 'EnderCompass-Rift-1.13.2'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
+	maven { url 'https://www.jitpack.io' }
+    maven { url 'https://files.minecraftforge.net/maven' }
     maven { url 'https://www.dimdev.org/maven/' }
+	maven { url 'http://repo.strezz.org/artifactory/list/Strezz-Central' }
 }
 
 dependencies {
-    implementation 'org.dimdev:rift:1.0.4-66:dev'
+    implementation 'com.github.Chocohead:Rift:jitpack-SNAPSHOT:dev'
 }
 
 minecraft {
-    version = '1.13'
-    mappings = 'stable_43'
+    version = '1.13.2'
+    mappings = 'snapshot_20181130'
     runDir = 'run'
     tweakClass = 'org.dimdev.riftloader.launch.RiftLoaderClientTweaker'
 }

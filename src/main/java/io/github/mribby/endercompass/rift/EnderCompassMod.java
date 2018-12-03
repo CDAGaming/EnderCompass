@@ -12,7 +12,7 @@ import org.dimdev.rift.listener.ItemAdder;
 import org.dimdev.rift.listener.PacketAdder;
 
 public class EnderCompassMod implements ItemAdder, PacketAdder {
-    public static final Item ENDER_COMPASS = new ItemEnderCompass(new Item.Builder().group(ItemGroup.TOOLS));
+    public static final Item ENDER_COMPASS = new ItemEnderCompass(new Item.Properties().group(ItemGroup.TOOLS));
 
     @Override
     public void registerItems() {

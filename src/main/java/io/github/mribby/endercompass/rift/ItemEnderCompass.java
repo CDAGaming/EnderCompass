@@ -12,8 +12,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class ItemEnderCompass extends Item {
-    public ItemEnderCompass(Builder builder) {
-        super(builder);
+    public ItemEnderCompass(Properties properties) {
+        super(properties);
         addPropertyOverride(new ResourceLocation("angle"), new EnderCompassAngleGetter()); // TODO: client-side only?
     }
 
